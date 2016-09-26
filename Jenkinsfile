@@ -33,6 +33,7 @@ node {
     //if (v) {
     //   echo "Building version ${v}"
     //}
+	readFile '/testing/Jenkinsfile'
 
 	//--------------------------------------------------------------------------
 	//                       ETAPA Test

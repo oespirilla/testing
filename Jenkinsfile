@@ -28,7 +28,7 @@ catch (exc) {
 
  err = caughtError
  currentBuild.result = "FAILURE"
- String recipient = 'infra@lists.jenkins-ci.org'
+ String recipient = 'arlene.salgado@laureate.net'
  mail subject: "${env.JOB_NAME} (${env.BUILD_NUMBER}) failed",
          body: "It appears that ${env.BUILD_URL} is failing, somebody should do something about that",
            to: recipient,

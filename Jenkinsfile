@@ -17,8 +17,8 @@ node {
 
     //checkout scm 
 
-    checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '593d0524-8364-4335-89d3-fc0bed5ed382', url: 'https://github.com/arlenesr28/testing.git']]])
-    echo 'configuracion scm'
+        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '593d0524-8364-4335-89d3-fc0bed5ed382', url: 'https://github.com/arlenesr28/testing.git']]])
+        echo 'configuracion scm'
 
 	//--------------------------------------------------------------------------
 	//                       ETAPA Set Version
@@ -33,7 +33,8 @@ node {
     //if (v) {
     //   echo "Building version ${v}"
     //}
-	readFile '/testing/Jenkinsfile'
+
+        readFile encoding: 'UTF-8', file: '/testing/Jenkinsfile'
 
 	//--------------------------------------------------------------------------
 	//                       ETAPA Test
@@ -53,7 +54,7 @@ node {
 	stage 'Release Build'
 	sshagent(['593d0524-8364-4335-89d3-fc0bed5ed382']) //Mis credenciales de github que estan guardadas en Jenkins
     // Push the commit and the created tag
-    bat returnStatus: true, script: '''git add calculadora.py
+        bat returnStatus: true, script: '''git add calculadora.py
 	git commit -m "Haciendo pruebas......."
 	git status
 	git pull origin master
@@ -67,4 +68,5 @@ node {
 	//--------------------------------------------------------------------------
 	//                       ETAPA
 	//--------------------------------------------------------------------------
+	//stage 'uipuipoi'
 }

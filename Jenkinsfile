@@ -34,7 +34,7 @@ node {
     //   echo "Building version ${v}"
     //}
 
-    	readFile encoding: 'UTF-8', file: '/testing/Jenkinsfile'
+    	//readFile encoding: 'UTF-8', file: '/testing/Jenkinsfile'
 
 	//--------------------------------------------------------------------------
 	//                       ETAPA Test

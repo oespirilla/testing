@@ -5,7 +5,7 @@ def Menu():
                 ************
                 Menu
                 ------------
-                1) Suma
+                1) Suma......
                 2) Resta
                 3) Multiplicacion
                 4) Division
